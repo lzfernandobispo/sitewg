@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Construção - WG Demolidora & Construtora</title>
+    
+    <link rel="icon" href="imagens/logowg.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body class="pagina-servicos-instagram">
+
+    <a href="#" id="back-to-top" title="Voltar ao topo">⬆️</a>
+
+    <header class="menu-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="imagens/logowg.png" alt="Logo da Empresa"></a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <div></div><div></div><div></div>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#servicos">Serviços</a></li>
+                <li><a href="index.html#portfolio">Portfólio</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <header class="profile-header">
+                <div class="profile-pic">
+                    <img src="imagens/logowg.png" alt="Logo WG Construtora">
+                </div>
+                <div class="profile-info">
+                    <div class="profile-title">
+                        <h2>WG Construtora</h2>
+                        <div class="profile-buttons">
+                            <a href="https://wa.me/5511993867850?text=Bem%20vindo%20(a)%20a%20WG%20Construtora" class="btn-primary">Solicitar Orçamento</a>
+                            <a href="index.html#portfolio" class="btn-outline">Ver Portfólio</a>
+                        </div>
+                    </div>
+                    <ul class="profile-stats">
+                        <li><strong>150+</strong> projetos concluídos</li>
+                        <li><strong>15</strong> anos de experiência</li>
+                        <li><strong>100%</strong> clientes satisfeitos</li>
+                    </ul>
+                    <div class="profile-bio">
+                        <p><strong>WG Demolidora & Construtora LTDA</strong><br>
+                            Especialistas em construção e reformas. Com anos de experiência, edificamos cada projeto com solidez, qualidade e profissionalismo.
+                        </p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="gallery-container">
+                <div class="gallery-tabs">
+                    <a href="index.html#servicos">TODOS OS SERVIÇOS</a>
+                    <a href="demolicao.html">DEMOLIÇÃO</a>
+                    <a href="#" class="active">CONSTRUÇÃO</a>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="grid-item">
+                        <img src="imagens/fotos (9).jpeg" alt="Construção Residencial" data-desc="Construção Residencial">
+                        <div class="grid-item-overlay"><span>Construção Residencial</span></div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="imagens/fotos (10).jpeg" alt="Construção Comercial" data-desc="Construção Comercial">
+                        <div class="grid-item-overlay"><span>Construção Comercial</span></div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="imagens/fotos (11).jpeg" alt="Construção Industrial" data-desc="Construção Industrial">
+                        <div class="grid-item-overlay"><span>Construção Industrial</span></div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="imagens/fotos (12).jpeg" alt="Fundações e Estruturas" data-desc="Fundações e Estruturas">
+                        <div class="grid-item-overlay"><span>Fundações e Estruturas</span></div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="imagens/fotos (13).jpeg" alt="Reformas em Geral" data-desc="Reformas em Geral">
+                        <div class="grid-item-overlay"><span>Reformas em Geral</span></div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="imagens/fotos (14).jpeg" alt="Acabamentos de Alto Padrão" data-desc="Acabamentos de Alto Padrão">
+                        <div class="grid-item-overlay"><span>Acabamentos de Alto Padrão</span></div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="imagens/fotos (15).jpeg" alt="Reformas em Geral" data-desc="Reformas em Geral">
+                        <div class="grid-item-overlay"><span>Reformas em Geral</span></div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="imagens/fotos (16).jpeg" alt="Reformas em Geral" data-desc="Reformas em Geral">
+                        <div class="grid-item-overlay"><span>Reformas em Geral</span></div>
+                    </div>
+                    
+                    </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="caption"></div>
+    </div>
+
+    <section id="contato" class="contato-section">
+        <div class="form-container">
+            <h2>Fale Conosco</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome*</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail*</label>
+                    <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="assunto">Assunto*</label>
+                    <input type="text" id="assunto" name="assunto" placeholder="Sobre qual projeto gostaria de falar?" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Sua Mensagem*</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
+            <div id="form-message" style="display:none;"></div>
+        </div>
+    </section>
+
+    <footer id="footer-contato">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="imagens/logowg.png" alt="Logo wg Demolidora">
+            </div>
+            <div class="contact-info">
+                <h2>WG DEMOLIDORA & CONSTRUTORA LTDA</h2>
+                <br>
+                <h3>Entre em Contato</h3>
+                <p>Email: <a href="mailto:wggarcia11@gmail.com">wggarcia11@gmail.com</a></p>
+                <p>Email: <a href="mailto:wgdemolidora.construtora@gmail.com">wgdemolidora.construtora@gmail.com</a></p>
+                <p>Celular: (11) 99386-7850</p>
+                <br>
+                <h3>Rua Tenente Manuel Joaquim Lopes, 161</h3>
+                <h3>CNPJ: 47.992.397/0001-09</h3>
+            </div>
+            <div class="social-icons">
+                <a href="https://wa.me/5511993867850?text=Bem%20vindo%20(a)%20a%20WG%20Demolidora" target="_blank" class="social-link">
+                    <img src="imagens/whatsapp.png" alt="Ícone WhatsApp">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="social-link"> <img src="imagens/logoinsta.png" alt="Ícone Instagram">
+                </a>
+                <a href="https://www.tiktok.com/" target="_blank" class="social-link"> <img src="imagens/logotiktok.png" alt="Ícone TikTok">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Script para abrir/fechar menu mobile
+            const mobileMenu = document.getElementById("mobile-menu");
+            const navLinks = document.getElementById("nav-links");
+
+            mobileMenu.addEventListener("click", () => {
+                navLinks.classList.toggle("show");
+            });
+
+            // Lógica do Formulário de Contato com EmailJS
+            // O ideal é ter um arquivo .js separado, mas mantendo aqui por enquanto
+            // (function() {
+            //     emailjs.init("SUA_CHAVE_PUBLICA");
+            // })();
+            // ... (resto da lógica do formulário)
+
+            // Lógica do Modal de Imagens
+            const gridItems = document.querySelectorAll('.grid-item');
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImg");
+            const captionText = document.getElementById("caption");
+            const closeBtn = document.querySelector("#imageModal .close");
+
+            gridItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const img = item.querySelector('img');
+                    modal.style.display = "block";
+                    modalImg.src = img.src;
+                    captionText.innerHTML = img.dataset.desc;
+                });
+            });
+
+            function closeModal() {
+                modal.style.display = "none";
+            }
+
+            if(closeBtn) {
+                closeBtn.onclick = closeModal;
+            }
+            
+            if(modal) {
+                modal.onclick = function(event) {
+                    if (event.target == modal) {
+                        closeModal();
+                    }
+                }
+            }
+            
+            // Lógica da Seta "Voltar ao Topo"
+            const backToTopBtn = document.getElementById("back-to-top");
+            if(backToTopBtn) {
+                window.onscroll = function() {
+                    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                        backToTopBtn.style.display = "block";
+                    } else {
+                        backToTopBtn.style.display = "none";
+                    }
+                };
+                backToTopBtn.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

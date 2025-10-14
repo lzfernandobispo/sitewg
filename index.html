@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WG DEMOLIDORA & CONSTRUTORA LTDA</title>
+    <link rel="icon" href="imagens/logowg.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="galeria.css">
+</head>
+
+<body class="pagina-inicial">
+    <a href="#" id="back-to-top" title="Voltar ao topo">⬆️</a>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#home">
+                    <img src="imagens/logowg.png" alt="Logo da Empresa">
+                </a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home-section">
+        <div class="overlay">
+            <h1>Bem-vindo à WG Demolidora e Construtora</h1>
+            <p>
+                A <strong>WG Demolidora e Construtora</strong> transforma projetos em realidade com
+                experiência, tecnologia e compromisso. Atuamos com demolição segura e construção de
+                qualidade, garantindo eficiência, responsabilidade e entrega no prazo.
+            </p>
+           
+            <div class="button-container">
+                <a href="#servicos" class="button">Serviços</a>
+                <a href="#contato" class="button">Contate-nos</a>
+                <button class="button" onclick="openVideoModal()">Assistir Vídeo</button>
+            </div>
+        </div>
+        <video autoplay muted loop class="background-video">
+            <source src="imagens/videoinicio.mp4" type="video/mp4">
+            Seu navegador não suporta o vídeo.
+        </video>
+
+        <div id="videoModal" class="modal" onclick="closeVideoModal(event)" style="display: none;">
+            <span class="close" onclick="closeVideoModal(event)">×</span>
+            <iframe id="video" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <h2>Serviços</h2>
+        <div class="servicos-container">
+            <div class="servico-item">
+                <a href="demolicao.html" class="servico-link">
+                    <div class="servico-image" style="background-image: url('imagens/capademoli.jpg');">
+                        <span>DEMOLIÇÃO</span>
+                    </div>
+                </a>
+            </div>
+            <div class="servico-item">
+                <a href="construcao.html" class="servico-link">
+                    <div class="servico-image" style="background-image: url('imagens/logoterrap.jpg');">
+                        <span>CONSTRUÇÃO</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="demolidora-info">
+        <div class="diagonal-bg">
+            <div class="container">
+                <div class="left-column">
+                    <h2>Por que escolher a WG?</h2>
+                    <p>
+                        Na WG Demolidora e Construtora, cada obra é tratada com máxima precisão e profissionalismo. Com nossa equipe altamente especializada e equipamentos de última geração, realizamos demolições seguras e construções impecáveis, entregando resultados rápidos, confiáveis e que impressionam. Transforme seu projeto em realidade com quem entende do assunto – escolha a WG e garanta qualidade, segurança e excelência do início ao fim!
+                    </p>
+                    <a href="https://wa.me/5511993867850?text=Bem%20vindo%20(a)%20a%20WG%20Demolidora" class="btn-saiba-mais">
+                        <img src="imagens/whatsapp.png" alt="Fale Conosco" style="width:24px; height:24px; vertical-align:middle; margin-right:8px;">
+                        Fale Conosco
+                    </a>
+                </div>
+
+                <div class="right-column">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="icon-placeholder">
+                                <img src="icones/hospital.png" alt="Ícone Missão">
+                            </div>
+                            <h3>Nossa Missão</h3>
+                            <p>
+                                Transformar cada projeto em realidade com máxima segurança e eficiência. Nossa missão é entregar obras de demolição e construção com qualidade superior, superando expectativas e garantindo total confiança aos nossos clientes.
+                            </p>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon-placeholder">
+                                <img src="icones/lupa.png" alt="Ícone Visão">
+                            </div>
+                            <h3>Nossa Visão</h3>
+                            <p>
+                                Ser referência no setor de demolição e construção, reconhecida pela excelência, inovação e comprometimento. Buscamos constantemente soluções que elevem os padrões do mercado e satisfaçam nossos clientes.
+                            </p>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon-placeholder">
+                                <img src="icones/aperto-de-mao.png" alt="Ícone Valores">
+                            </div>
+                            <h3>Nossos Valores</h3>
+                            <p>
+                                Compromisso, ética, qualidade, segurança e inovação. Trabalhamos sempre com responsabilidade e dedicação, garantindo resultados que impressionam e duram.
+                            </p>
+                        </div>
+                        <div class="info-item">
+                            <div class="icon-placeholder">
+                                <img src="imagens/whatsapp.png" alt="Ícone Atendimento">
+                            </div>
+                            <h3>Atendimento Imediato</h3>
+                            <p>
+                                Fale agora com nossos especialistas e receba orientação personalizada. Estamos prontos para oferecer soluções rápidas e eficientes para cada necessidade do seu projeto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="clientes-wg">
+        <div class="clientes-conteudo">
+            <div class="clientes-texto">
+                <h2>Segmentos que Atendemos</h2>
+                <ul>
+                    <li><i class="icone publico"></i> Órgãos Públicos</li>
+                    <li><i class="icone portos"></i> Segmento Civil</li>
+                    <li><i class="icone industrial"></i> Segmento Industrial</li>
+                    <li><i class="icone comercial"></i> Segmento Comercial</li>
+                    <li><i class="icone construtoras"></i> Construtoras</li>
+                    <li><i class="icone hospitalar"></i> Segmento Hospitalar</li>
+                </ul>
+            </div>
+            <div class="clientes-imagem">
+                <img src="imagens/logowg.png" alt="Parceria WG Demolidora">
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio-section">
+        <h2 style="text-align: center; color: #cba135;">Nosso Portfólio</h2>
+
+        <div class="portfolio-item reverse">
+            <div class="portfolio-text">
+                <h3>Transformando Projetos com Segurança e Excelência</h3>
+                <h4>Segurança, Inovação e Resultados Garantidos</h4>
+                <p>
+                    <strong>Soluções Completas em Demolição e Construção:</strong> Nossa equipe realiza demolições seguras e eficientes, utilizando equipamentos modernos e técnicas avançadas, garantindo proteção de pessoas e patrimônio, além de reduzir impactos no entorno.
+                    <br><br>
+                    <strong>Projetos Personalizados e Reformas de Grande Porte:</strong> Atuamos em construções e reformas de edifícios, galpões e estruturas comerciais e residenciais, sempre respeitando prazos e padrões de qualidade rigorosos. Cada projeto é planejado para atender às necessidades específicas de nossos clientes.
+                    <br><br>
+                    <strong>Gestão e Monitoramento Profissional:</strong> Acompanhamos todas as etapas do projeto, desde o planejamento inicial até a entrega final, assegurando precisão, cumprimento de cronogramas e total conformidade com normas de segurança. Nosso objetivo é proporcionar tranquilidade, confiança e resultados que superem expectativas.
+                </p>
+            </div>
+            <div class="portfolio-image" style="background-image: url('imagens/port02.webp');"></div>
+        </div>
+
+        <div class="portfolio-item">
+            <div class="portfolio-image" style="background-image: url('imagens/logowg.png');"></div>
+            <div class="portfolio-text">
+                <h3>Vantagens da WG Demolidora e Construtora</h3>
+                <h4>Compromisso com Qualidade, Segurança e Eficiência</h4>
+                <p>
+                    <strong>Experiência e Expertise:</strong> Nossa equipe é formada por profissionais altamente capacitados, com vasta experiência em demolição, construção e reformas de grande porte.
+                    <br><br>
+                    <strong>Compromisso com a Qualidade:</strong> Utilizamos técnicas modernas e equipamentos de ponta, garantindo segurança, durabilidade e excelência em cada projeto.
+                    <br><br>
+                    <strong>Planejamento e Execução Precisa:</strong> Cada obra é cuidadosamente planejada e acompanhada, assegurando que prazos e padrões de qualidade sejam rigorosamente cumpridos.
+                    <br><br>
+                    <strong>Satisfação do Cliente:</strong> A confiança e o retorno positivo de nossos clientes são nossa maior motivação. Trabalhamos em parceria para entender suas necessidades e superar expectativas em todos os projetos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato-section">
+        <div class="form-container">
+            <h2>Fale Conosco: </h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome*</label>
+                    <input type="text" id="nome" name="nome" placeholder="Nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail*</label>
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="assunto">Assunto*</label>
+                    <input type="text" id="assunto" name="assunto" placeholder="Assunto" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Sua Mensagem *</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Digite a sua mensagem" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
+            <div id="form-message" style="display:none;"></div>
+        </div>
+    </section>
+
+    <footer id="footer-contato">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="imagens/logowg.png" alt="Logo wg Demolidora">
+            </div>
+            <div class="contact-info">
+                <h2>WG DEMOLIDORA & CONSTRUTORA LTDA</h2>
+                <br>
+                <h3>Entre em Contato</h3>
+                <p>Email: <a href="mailto:wggarcia11@gmail.com">wggarcia11@gmail.com</a></p>
+                <p>Email: <a href="mailto:wgdemolidora.construtora@gmail.com">wgdemolidora.construtora@gmail.com</a></p>
+                <p>Celular: (11) 99386-7850</p>
+                <br>
+                <h3>Rua Tenente Manuel Joaquim Lopes, 161</h3>
+                <h3>CNPJ: 47.992.397/0001-09</h3>
+            </div>
+            <div class="social-icons">
+                <a href="https://wa.me/5511993867850?text=Bem%20vindo%20(a)%20a%20WG%20Demolidora" target="_blank" class="social-link">
+                    <img src="imagens/whatsapp.png" alt="Ícone WhatsApp">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="social-link"> <img src="imagens/logoinsta.png" alt="Ícone Instagram">
+                </a>
+                <a href="https://www.tiktok.com/" target="_blank" class="social-link"> <img src="imagens/logotiktok.png" alt="Ícone TikTok">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="galeria.js"></script>
+
+    <script>
+        // Lógica do Modal de Vídeo
+        function openVideoModal() {
+            const videoModal = document.getElementById("videoModal");
+            const video = document.getElementById("video");
+            video.src = "https://player.vimeo.com/video/1123738349"; // Novo vídeo
+
+            videoModal.style.display = "block";
+
+            // Tenta colocar o modal em tela cheia
+            if (videoModal.requestFullscreen) {
+                videoModal.requestFullscreen();
+            } else if (videoModal.mozRequestFullScreen) { // Firefox
+                videoModal.mozRequestFullScreen();
+            } else if (videoModal.webkitRequestFullscreen) { // Chrome, Safari e Opera
+                videoModal.webkitRequestFullscreen();
+            } else if (videoModal.msRequestFullscreen) { // IE/Edge
+                videoModal.msRequestFullscreen();
+            }
+        }
+
+        function closeVideoModal(event) {
+            if (event.target.className === 'close' || event.target.className === 'modal') {
+                const videoModal = document.getElementById("videoModal");
+                videoModal.style.display = "none";
+                const video = document.getElementById("video");
+                video.src = ""; // Limpa o src para parar a reprodução
+            }
+        }
+
+        // Lógica do Formulário de Contato com EmailJS
+        document.addEventListener("DOMContentLoaded", function() {
+            // Inicializa o EmailJS com sua chave pública
+            (function() {
+                emailjs.init("pmd9kioZB4thCxtmB");
+            })();
+
+            // Envio do formulário
+            const contactForm = document.getElementById("contact-form");
+            if (contactForm) {
+                contactForm.addEventListener("submit", function(event) {
+                    event.preventDefault(); // Evita o envio padrão do formulário
+
+                    // Envia o e-mail usando EmailJS
+                    emailjs.send("service_wpequ2s", "template_k5cxx5o", {
+                            nome: document.getElementById("nome").value,
+                            email: document.getElementById("email").value,
+                            assunto: document.getElementById("assunto").value,
+                            mensagem: document.getElementById("mensagem").value
+                        })
+                        .then(function(response) {
+                            console.log("Mensagem enviada com sucesso!", response);
+                            const formMessage = document.getElementById("form-message");
+                            formMessage.innerText = "Mensagem enviada com sucesso!";
+                            formMessage.style.display = "block";
+                            contactForm.reset(); // Limpa o formulário
+                        }, function(error) {
+                            console.log("Falha ao enviar a mensagem: ", error);
+                            const formMessage = document.getElementById("form-message");
+                            formMessage.innerText = "Falha ao enviar a mensagem.";
+                            formMessage.style.display = "block";
+                        });
+                });
+            }
+
+            // Script para o menu hamburguer
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.getElementById('nav-links');
+
+            mobileMenu.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            // Fecha o menu ao clicar fora dele
+            window.addEventListener('click', (event) => {
+                if (!mobileMenu.contains(event.target) && !navLinks.contains(event.target)) {
+                    navLinks.classList.remove('active');
+                }
+            });
+
+            // Animação da seção Portfólio ao rolar
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            });
+
+            portfolioItems.forEach(item => {
+                observer.observe(item);
+            });
+        });
+
+
+        // Lógica da Seta "Voltar ao Topo"
+        window.onscroll = function() {
+            const backToTop = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        };
+
+        document.getElementById("back-to-top").addEventListener("click", function(event) {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+
+</html>

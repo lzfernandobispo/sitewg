@@ -1,0 +1,1389 @@
+/* ---------- Reset ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- Base ---------- */
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #212121; /* Cinza escuro principal */
+    color: #E0E0E0; /* Texto claro */
+    line-height: 1.6;
+    padding-top: 80px; /* Espaço para navbar fixa */
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FDC830; /* Amarelo/Dourado de destaque */
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+    position: sticky; /* ou 'fixed' se preferir que ela role com a página */
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(33, 33, 33, 0.95); /* Fundo da navbar semi-transparente */
+    padding: 15px 30px;
+    border-bottom: 2px solid #FDC830; /* Borda inferior amarela/dourada */
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra para profundidade */
+}
+
+.logo img {
+    width: 130px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #E0E0E0; /* Texto claro */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FDC830; /* Amarelo/Dourado no hover */
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px; /* Espaçamento entre as barras */
+}
+
+.menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background-color: #E0E0E0; /* Cor das barras do menu */
+    margin: 3px 0;
+}
+
+/* ---------- Seção Home ---------- */
+.home-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    color: #E0E0E0; /* Texto claro */
+    overflow: hidden;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.overlay {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(33, 33, 33, 0.75); /* Fundo semi-transparente */
+    padding: 30px 25px;
+    border-radius: 12px;
+    max-width: 850px;
+    width: 90%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.home-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #FDC830; /* Título principal amarelo/dourado */
+}
+
+.home-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #BBBBBB; /* Texto de parágrafo */
+}
+
+/* ---------- Botões (geral) ---------- */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.button {
+    background: linear-gradient(135deg, #3A3A3A, #212121); /* Degradê de cinzas */
+    color: #E0E0E0; /* Texto claro */
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    border: 1px solid #FDC830; /* Borda amarela/dourada */
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #FDC830, #e0a800); /* Degradê amarelo/dourado no hover */
+    color: #212121; /* Texto escuro no hover */
+    transform: translateY(-3px);
+    box-shadow: 0 0 18px rgba(253, 200, 48, 0.9); /* Brilho amarelo/dourado */
+}
+
+/* Vídeo de fundo */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* ---------- Modal de Vídeo (Seção Home) ---------- */
+#videoModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    overflow: auto;
+    display: flex; /* Para centralizar o iframe */
+    align-items: center;
+    justify-content: center;
+}
+
+#videoModal .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#videoModal .close:hover {
+    color: #FDC830; /* Amarelo/Dourado no hover do botão fechar */
+}
+
+#videoModal iframe {
+    max-width: 90%;
+    max-height: 90%;
+    width: 100%; /* Permitir que o iframe preencha o espaço disponível */
+    height: 100%;
+    aspect-ratio: 16/9; /* Proporção de vídeo comum */
+    border-radius: 10px;
+}
+
+
+/* ---------- Seção Serviços ---------- */
+#servicos {
+    padding: 60px 20px;
+    background-color: #212121; /* Fundo cinza escuro */
+}
+
+.servicos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 25px; /* Aumentado um pouco o gap */
+    max-width: 1200px; /* Limite para o container */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.servico-item {
+    flex: 1; /* Permitir que os itens cresçam */
+    margin: 0; /* Remover margem individual para usar gap */
+    min-width: 280px; /* Aumentar o min-width para itens maiores */
+    height: 320px; /* Ajustar a altura */
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px; /* Cantos mais arredondados */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* Sombra mais suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servico-item:hover {
+    transform: translateY(-8px); /* Efeito de elevação sutil */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5); /* Sombra mais proeminente no hover */
+}
+
+.servico-link {
+    display: block;
+    height: 100%;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+}
+
+.servico-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(80%); /* Mais cinza para um visual mais industrial */
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.servico-link:hover .servico-image {
+    filter: grayscale(0%); /* Colorido no hover */
+    transform: scale(1.05); /* Zoom sutil na imagem */
+}
+
+.servico-image span {
+    position: absolute;
+    bottom: 20px; /* Mais afastado da borda */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.6); /* Fundo para o texto */
+    padding: 10px 0;
+    border-top: 2px solid #FDC830; /* Linha de destaque */
+    font-size: 1.5rem; /* Tamanho maior para o texto */
+    font-weight: 700; /* Mais negrito */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.servico-link:hover .servico-image span {
+    background-color: rgba(253, 200, 48, 0.8); /* Fundo amarelo/dourado no hover */
+    color: #212121; /* Texto escuro no hover */
+}
+
+/* Modal de imagens (galeria.css) - mantido aqui e com cores ajustadas */
+/* O script galeria.js não foi fornecido, então o modal de imagem genérico foi mantido e ajustado */
+.modal-gallery { /* Renomeado para evitar conflito com videoModal */
+    display: none;
+    position: fixed;
+    z-index: 1001; /* Maior que videoModal se ambos existirem */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.95);
+    overflow: auto;
+}
+
+.modal-content {
+    display: block;
+    margin: 50px auto;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+}
+
+.close-gallery { /* Renomeado */
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-gallery:hover {
+    color: #FDC830;
+}
+
+#caption {
+    margin: 20px auto;
+    text-align: center;
+    color: #E0E0E0;
+    font-size: 18px;
+}
+
+.servico-desc {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #BBBBBB; /* Cor de texto ajustada */
+}
+
+/* ---------- Info Demolidora (Por que escolher a WG?) ---------- */
+.demolidora-info {
+    position: relative;
+    width: 100%;
+    color: #E0E0E0;
+    padding: 80px 0;
+    overflow: hidden;
+    background-color: #212121; /* Fundo principal */
+}
+
+.demolidora-info .diagonal-bg {
+    background-color: #3A3A3A; /* Fundo secundário cinza */
+    padding: 60px 0;
+    transform: skewY(-3deg);
+    box-shadow: 0 -10px 20px rgba(0,0,0,0.3); /* Sombra na borda superior */
+    border-bottom: 2px solid #FDC830; /* Linha amarela/dourada */
+}
+
+.demolidora-info .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    transform: skewY(3deg);
+}
+
+.left-column {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.left-column h2 {
+    font-size: 2rem; /* Tamanho ajustado */
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: #FDC830; /* Amarelo/Dourado */
+    text-align: left; /* Alinhamento do título */
+}
+
+.left-column p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #BBBBBB;
+}
+
+/* Botão Fale Conosco */
+.btn-saiba-mais {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    border: 2px solid #FDC830; /* Amarelo/Dourado */
+    color: #FDC830;
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 8px;
+    gap: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+}
+
+.btn-saiba-mais img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.4s ease;
+}
+
+.btn-saiba-mais:hover {
+    background: #FDC830; /* Fundo amarelo/dourado no hover */
+    color: #212121; /* Texto escuro no hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.btn-saiba-mais:hover img {
+    transform: scale(1.2) rotate(-10deg);
+}
+
+.right-column {
+    flex: 2;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinhar itens à esquerda */
+    text-align: left; /* Texto alinhado à esquerda */
+    background-color: #212121; /* Fundo para cada item */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-left: 3px solid #FDC830; /* Borda de destaque */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default; /* Remover cursor de clique */
+}
+
+.info-item:hover {
+    transform: translateY(-5px); /* Efeito de elevação sutil */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.icon-placeholder {
+    width: 60px; /* Ajustar tamanho */
+    height: 60px; /* Ajustar tamanho */
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3A3A3A; /* Fundo para os ícones */
+    border-radius: 50%;
+}
+
+.icon-placeholder img {
+    max-width: 35px; /* Ajustar tamanho dos ícones */
+    max-height: 35px;
+    object-fit: contain;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(285deg) brightness(150%) contrast(100%); /* Ícones brancos */
+}
+
+
+.info-item h3 {
+    font-size: 1.3rem; /* Tamanho ajustado */
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #FDC830; /* Amarelo/Dourado */
+    transition: color 0.3s ease;
+}
+
+.info-item:hover h3 {
+    color: #E0E0E0; /* Texto claro no hover */
+}
+
+.info-item p {
+    font-size: 0.95rem; /* Ajustar tamanho */
+    line-height: 1.5;
+    margin: 0;
+    color: #BBBBBB;
+    transition: color 0.3s ease;
+}
+
+.info-item:hover p {
+    color: #E0E0E0;
+}
+
+
+/* ==========================================================================
+   Clientes WG / Segmentos Atendidos - VERSÃO FINAL COM FILTRO GARANTIDO
+   ========================================================================== */
+
+.clientes-wg {
+    background-color: #212121;
+    padding: 80px 20px;
+}
+
+.clientes-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.clientes-texto {
+    flex: 1.2;
+    min-width: 320px;
+}
+
+.clientes-texto h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #FDC830;
+    text-align: left;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3A3A3A;
+}
+
+.clientes-texto ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* ESTADO INICIAL (SUTIL E "DESLIGADO") */
+.clientes-texto li {
+    display: flex;
+    align-items: center;
+    background-color: #2a2a2a;
+    color: #888;
+    padding: 25px;
+    border-radius: 8px;
+    border: 2px solid #444;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.4s ease-in-out;
+}
+
+.clientes-texto i.icone {
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* FILTRO INICIAL: Ícone cinza e com pouco brilho */
+    filter: grayscale(100%) brightness(0.6);
+    transition: all 0.4s ease-in-out;
+}
+
+/* EFEITO AO PASSAR O MOUSE (EXUBERANTE E "ILUMINADO") */
+.clientes-texto li:hover {
+    transform: translateY(-10px);
+    color: #E0E0E0;
+    border-color: #FDC830;
+    background-color: #3A3A3A;
+    box-shadow: 0 0 25px rgba(253, 200, 48, 0.4), 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.clientes-texto li:hover i.icone {
+    /* FILTRO NOVO E SEGURO: Transforma qualquer ícone em branco puro aumentando o brilho ao máximo */
+    filter: grayscale(100%) brightness(1000%);
+    transform: scale(1.1);
+}
+
+
+/* Usando background-image que já confirmamos que funciona */
+.icone.industrial { background-image: url('icones/industrial.png'); }
+.icone.comercial { background-image: url('icones/armazenar.png'); }
+.icone.construtoras { background-image: url('icones/arquitetura.png'); }
+.icone.hospitalar { background-image: url('icones/hospital.png'); }
+.icone.publico { background-image: url('icones/corredor.png'); }
+.icone.portos { background-image: url('icones/predio-comercial.png'); }
+
+
+/* Imagem ao lado (sem grandes mudanças) */
+.clientes-imagem {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.clientes-imagem img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* ---------- Seção Portfólio ---------- */
+#portfolio {
+    padding: 80px 20px;
+    background-color: #3A3A3A; /* Fundo cinza médio */
+}
+
+.portfolio-section h2 {
+    color: #FDC830; /* Título amarelo/dourado */
+}
+
+.portfolio-item {
+    max-width: 1100px;
+    margin: 0 auto 60px auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: #212121; /* Fundo de cada item */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    border: 1px solid #505050; /* Borda sutil */
+}
+
+.portfolio-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.portfolio-image {
+    flex: 1;
+    height: 380px; /* Altura ajustada */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-image {
+    transform: scale(1.02); /* Zoom suave na imagem do portfólio */
+}
+
+.portfolio-text {
+    flex: 1;
+    color: #E0E0E0; /* Texto claro */
+}
+
+.portfolio-text h3 {
+    color: #FDC830; /* Título amarelo/dourado */
+    font-size: 1.8em; /* Tamanho ajustado */
+    text-align: left; /* Alinhamento do título */
+    margin-bottom: 10px;
+}
+
+.portfolio-text h4 {
+    color: #BBBBBB; /* Texto secundário */
+    font-size: 1.3em; /* Tamanho ajustado */
+    margin: 10px 0 20px;
+    text-align: left; /* Alinhamento do subtítulo */
+}
+
+.portfolio-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #BBBBBB;
+}
+
+.portfolio-text p strong {
+    color: #FDC830; /* Destaque para o strong */
+}
+
+/* ==========================================================================
+   Seção de Contato (Formulário) - VERSÃO MELHORADA
+   ========================================================================== */
+
+.contato-section {
+    position: relative; /* Necessário para a sobreposição */
+    background-image: url('imagens/maquina06.jpg'); /* <<-- COLOQUE UMA IMAGEM DE FUNDO AQUI */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito Parallax */
+    padding: 100px 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+/* Camada escura sobre a imagem de fundo para legibilidade */
+.contato-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(33, 33, 33, 0.8), rgba(33, 33, 33, 0.95));
+    z-index: -1;
+}
+
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    /* Efeito "Frosted Glass" */
+    background-color: rgba(42, 42, 42, 0.6); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px); /* O desfoque mágico */
+    -webkit-backdrop-filter: blur(10px);
+    
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(253, 200, 48, 0.2); /* Borda sutil na cor de destaque */
+}
+
+.form-container h2 {
+    color: #FDC830;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(253, 200, 48, 0.3); /* Linha decorativa abaixo do título */
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+/* Sugestão: Adicione um parágrafo abaixo do h2 no seu HTML para um toque extra */
+.form-container p.subtitle {
+    margin-top: -10px;
+    margin-bottom: 30px;
+    color: #BBBBBB;
+    font-size: 1.1rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    color: #E0E0E0;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #505050;
+    border-radius: 8px;
+    background-color: rgba(33, 33, 33, 0.8); /* Fundo dos campos um pouco transparente */
+    color: #E0E0E0;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #FDC830;
+    background-color: #212121;
+    box-shadow: 0 0 0 4px rgba(253, 200, 48, 0.1);
+}
+
+.btn-submit {
+    background-color: #FDC830;
+    color: #212121;
+    padding: 14px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #e0a800;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+#form-message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #E0E0E0;
+    background-color: #3A3A3A;
+    border: 1px solid #505050;
+}
+/* ---------- Rodapé ---------- */
+footer#footer-contato { /* Adicionado o ID do footer para especificidade */
+    background-color: #111; /* Fundo mais escuro */
+    color: #E0E0E0;
+    padding: 60px 20px;
+    border-top: 3px solid #FDC830; /* Linha de destaque amarela/dourada */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px; /* Espaçamento ajustado */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    width: 140px; /* Logo um pouco maior */
+    height: auto;
+}
+
+.contact-info {
+    flex: 2;
+    min-width: 250px;
+    text-align: left; /* Alinhar texto à esquerda */
+}
+
+.contact-info h2 {
+    color: #FDC830; /* Amarelo/Dourado */
+    margin-bottom: 10px;
+    text-align: left; /* Alinhar título à esquerda */
+    font-size: 1.6rem; /* Ajuste de tamanho */
+}
+
+.contact-info h3 {
+    color: #E0E0E0; /* Texto claro */
+    margin-top: 15px;
+    margin-bottom: 8px;
+    text-align: left; /* Alinhar título à esquerda */
+    font-size: 1.2rem; /* Ajuste de tamanho */
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #BBBBBB;
+}
+
+.contact-info a {
+    color: #FDC830; /* Link amarelo/dourado */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #e0a800; /* Amarelo/Dourado mais escuro no hover */
+}
+
+.social-icons { /* Renomeado para melhor clareza */
+    display: flex;
+    flex-direction: column; /* Ícones em coluna */
+    align-items: flex-end; /* Alinhar à direita */
+    gap: 15px; /* Espaçamento entre os ícones */
+    flex: 1; /* Para ocupar o espaço restante */
+    min-width: 100px; /* Garantir que não encolha demais */
+}
+
+.social-link img {
+    width: 45px; /* Tamanho dos ícones */
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0.8); /* Levemente escurecido */
+}
+
+.social-link:hover img {
+    transform: scale(1.15);
+    filter: brightness(1.2); /* Mais claro no hover */
+}
+
+
+/* ---------- Botão Voltar ao Topo ---------- */
+#back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    background-color: #FDC830; /* Amarelo/Dourado */
+    color: #212121; /* Texto escuro */
+    padding: 12px 18px; /* Ajuste de padding */
+    font-size: 26px; /* Tamanho do ícone */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+#back-to-top:hover {
+    background-color: #e0a800; /* Amarelo/Dourado mais escuro no hover */
+    transform: translateY(-5px);
+}
+
+/* ==========================================================================
+   Responsividade
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .navbar { padding: 15px 20px; }
+    .nav-links li { margin-left: 20px; }
+    .home-section h1 { font-size: 2.5rem; }
+    .home-section p { font-size: 1.1rem; }
+
+    .demolidora-info .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    .left-column { padding-right: 0; }
+    .left-column h2 { text-align: center; }
+    .info-item { align-items: center; text-align: center; }
+    .info-grid { gap: 30px; }
+
+    .portfolio-item, .portfolio-item.reverse {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .portfolio-image { width: 100%; height: 300px; }
+    .portfolio-text h3, .portfolio-text h4, .portfolio-text p { text-align: center; }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .contact-info { text-align: center; }
+    .contact-info h2, .contact-info h3 { text-align: center; }
+    .social-icons { flex-direction: row; justify-content: center; align-items: center; width: 100%; margin-top: 20px; }
+}
+
+@media (max-width: 768px) {
+    body { padding-top: 70px; }
+    .navbar { padding: 10px 15px; }
+    .logo img { width: 100px; }
+
+    .menu-toggle { display: flex; }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px; /* Altura da navbar */
+        left: 0;
+        width: 100%;
+        background-color: rgba(33, 33, 33, 0.98);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        border-top: 1px solid #505050;
+    }
+    .nav-links.active { display: flex; }
+    .nav-links li { margin: 12px 0; }
+    .nav-links a { font-size: 16px; }
+
+    .home-section h1 { font-size: 2rem; }
+    .home-section p { font-size: 0.95rem; }
+    .overlay { padding: 25px 20px; }
+    .button { padding: 10px 20px; font-size: 0.9rem; }
+    .button-container { flex-direction: column; }
+
+    .servicos-container {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        gap: 20px;
+    }
+    .servico-item { min-width: 100%; height: 280px; }
+    .servico-image span { font-size: 1.3rem; }
+
+    .clientes-conteudo { flex-direction: column; gap: 30px; }
+    .clientes-texto h2 { text-align: center; }
+    .clientes-texto ul { align-items: center; }
+    .clientes-texto li { justify-content: center; } /* Centraliza os itens da lista */
+    .clientes-imagem img { max-width: 100%; }
+
+    .info-grid { grid-template-columns: 1fr; }
+
+    .portfolio-image { height: 250px; }
+
+    .form-container { padding: 30px 20px; }
+}
+/* ==========================================================================
+   ARQUIVO CSS ÚNICO PARA TODO O SITE
+   ========================================================================== */
+
+/* 1. ESTILOS GLOBAIS (PARA TODAS AS PÁGINAS) */
+:root {
+    --color-primary: #FDC830;
+    --color-primary-darker: #e0a800;
+    --color-dark-bg: #212121;
+    --color-light-bg: #3A3A3A;
+    --color-text-light: #E0E0E0;
+    --color-text-muted: #BBBBBB;
+    --color-border: #444;
+    --font-main: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: var-font-main;
+    background-color: var-color-dark-bg;
+    color: var-color-text-light;
+    line-height: 1.7;
+    padding-top: 80px; 
+}
+.container { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+/* ... (outros estilos globais de navbar, footer, botões, modal, etc.) ... */
+.btn-primary, .btn-outline {
+    display: inline-block; padding: 8px 16px; font-weight: 600;
+    font-size: 0.9rem; text-decoration: none; text-align: center;
+    border-radius: 8px; cursor: pointer; border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+.btn-primary { background-color: var-color-primary; color: var-color-dark-bg; border-color: var-color-primary; }
+.btn-outline { background-color: transparent; color: var-color-text-light; border-color: var-color-border; }
+.btn-primary:hover { background-color: var-color-primary-darker; }
+.btn-outline:hover { border-color: var-color-text-light; }
+
+
+/* ==========================================================================
+   2. ESTILOS EXCLUSIVOS DA PÁGINA INICIAL (index.html)
+   ========================================================================== */
+.pagina-inicial #servicos .servicos-container { /* ... estilos dos serviços do index aqui ... */ }
+/* ... outros estilos do index aqui ... */
+
+
+/* ==========================================================================
+   3. ESTILOS EXCLUSIVOS DA PÁGINA "INSTAGRAM" (demolicao.html)
+   ========================================================================== */
+
+/* --- Cabeçalho do Perfil --- */
+.pagina-servicos-instagram .profile-header {
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    border-bottom: 1px solid var-color-border;
+}
+.pagina-servicos-instagram .profile-pic {
+    flex: 0 0 150px;
+    margin-right: 60px;
+}
+.pagina-servicos-instagram .profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var-color-border;
+}
+.pagina-servicos-instagram .profile-info {
+    flex-grow: 1;
+}
+.pagina-servicos-instagram .profile-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+.pagina-servicos-instagram .profile-title h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin: 0;
+}
+.pagina-servicos-instagram .profile-buttons {
+    display: flex;
+    gap: 10px;
+}
+.pagina-servicos-instagram .profile-stats {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+.pagina-servicos-instagram .profile-stats li {
+    font-size: 1rem;
+}
+.pagina-servicos-instagram .profile-bio p {
+    color: var-color-text-muted;
+}
+.pagina-servicos-instagram .profile-bio strong {
+    color: var-color-text-light;
+    font-weight: 600;
+}
+
+/* --- Abas e Galeria --- */
+.pagina-servicos-instagram .gallery-container {
+    padding: 30px 0;
+}
+.pagina-servicos-instagram .gallery-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    border-top: 1px solid var-color-border;
+    padding-top: 15px;
+}
+.pagina-servicos-instagram .gallery-tabs a {
+    color: var-color-text-muted;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0 0 15px 0;
+    border-top: 2px solid transparent;
+    transform: translateY(-2px);
+}
+.pagina-servicos-instagram .gallery-tabs a.active {
+    color: var-color-primary;
+    border-top-color: var-color-primary;
+}
+
+/* --- Grade de Fotos --- */
+.pagina-servicos-instagram .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 30px;
+}
+.pagina-servicos-instagram .grid-item {
+    position: relative;
+    cursor: pointer;
+    aspect-ratio: 1 / 1; /* Força o item a ser um quadrado perfeito */
+}
+.pagina-servicos-instagram .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+.pagina-servicos-instagram .grid-item-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.pagina-servicos-instagram .grid-item:hover .grid-item-overlay {
+    opacity: 1;
+}
+.pagina-servicos-instagram .grid-item:hover img {
+    filter: brightness(0.8);
+}
+
+
+/* ==========================================================================
+   4. RESPONSIVIDADE
+   ========================================================================== */
+@media (max-width: 768px) {
+    body { padding-top: 70px; }
+    /* ... (outros estilos responsivos globais) ... */
+
+    .pagina-servicos-instagram .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .pagina-servicos-instagram .profile-pic {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .pagina-servicos-instagram .profile-title {
+        flex-direction: column;
+    }
+    .pagina-servicos-instagram .profile-stats {
+        justify-content: center;
+        gap: 20px;
+    }
+    .pagina-servicos-instagram .gallery-grid {
+        gap: 5px; /* Reduz o gap no mobile, como no Instagram */
+    }
+}
+
+/* ==========================================================================
+   ARQUIVO CSS ÚNICO PARA TODO O SITE
+   ========================================================================== */
+
+/* 1. ESTILOS GLOBAIS (PARA TODAS AS PÁGINAS) */
+:root {
+    --color-primary: #FDC830;
+    --color-dark-bg: #212121;
+    --color-light-bg: #3A3A3A;
+    --color-text-light: #E0E0E0;
+    --color-text-muted: #BBBBBB;
+    --color-border: #444;
+    --font-main: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+.container { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+a { color: var(--color-primary); text-decoration: none; }
+h1 { font-size: 2.8rem; }
+h2 { font-size: 1.8rem; color: var(--color-primary); text-align: center; margin: 0 0 20px 0; }
+/* ... outros estilos globais ... */
+
+
+/* ==========================================================================
+   NOVO: ESTILO DO CABEÇALHO COM IMAGEM DECORATIVA
+   ========================================================================== */
+.menu-imagem-decorativa {
+    position: relative;
+    height: 120px; /* Um cabeçalho mais curto e elegante */
+    width: 100%;
+    overflow: hidden; 
+    display: flex;
+    justify-content: space-between; /* Coloca o menu na esquerda e a imagem na direita */
+    align-items: center;
+    padding: 0 5%; /* Espaçamento lateral */
+    background: linear-gradient(to right, var(--color-dark-bg) 60%, var(--color-light-bg));
+    border-bottom: 1px solid var(--color-border);
+}
+
+.navbar {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.header-imagem-elemento {
+    height: 100%; /* A imagem ocupa toda a altura do cabeçalho */
+    width: auto; /* A largura se ajusta para manter a proporção */
+    max-width: 40%; /* Limita a largura da imagem */
+    /* Efeito de máscara para uma transição suave com o fundo */
+    -webkit-mask-image: linear-gradient(to left, black 60%, transparent 100%);
+    mask-image: linear-gradient(to left, black 60%, transparent 100%);
+}
+
+
+/* ==========================================================================
+   ESTILOS DA PÁGINA "INSTAGRAM"
+   ========================================================================== */
+main {
+    padding-top: 40px;
+}
+/* ... (Todo o resto do estilo da página instagram continua aqui) ... */
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+.profile-pic img {
+    width: 150px; height: 150px; border-radius: 50%;
+    object-fit: cover; border: 3px solid var(--color-border);
+}
+/* ... etc ... */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px; margin-top: 30px;
+}
+.grid-item { position: relative; cursor: pointer; aspect-ratio: 1 / 1; }
+
+
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+@media (max-width: 768px) {
+    .menu-imagem-decorativa {
+        justify-content: center; /* Centraliza o menu no mobile */
+    }
+    
+    .header-imagem-elemento {
+        display: none; /* Esconde a imagem decorativa em telas pequenas */
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .menu-toggle { display: flex; }
+    .nav-links {
+        display: none; position: fixed; /* Mude para 'fixed' para sobrepor o conteúdo */
+        top: 75px; /* Altura do navbar */
+        left: 0; width: 100%; 
+        background-color: rgba(33, 33, 33, 0.98);
+        flex-direction: column; align-items: center; padding: 20px 0;
+        border-top: 1px solid var(--color-border);
+    }
+    .nav-links.show { display: flex; } 
+    .nav-links li { margin: 12px 0; }
+    
+    /* ... (outros estilos responsivos) ... */
+    .profile-header { flex-direction: column; text-align: center; }
+    .gallery-grid { gap: 5px; }
+}
+
+/* ==========================================================================
+   ARQUIVO CSS ÚNICO PARA TODO O SITE
+   ========================================================================== */
+
+/* 1. ESTILOS GLOBAIS */
+:root {
+    --color-primary: #FDC830;
+    --color-dark-bg: #212121;
+    --color-light-bg: #3A3A3A;
+    --color-text-light: #E0E0E0;
+    --color-text-muted: #BBBBBB;
+    --color-border: #444;
+    --font-main: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+.container { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+a { color: var(--color-primary); text-decoration: none; }
+h2 { font-size: 1.8rem; color: var(--color-primary); text-align: center; margin: 0 0 20px 0; }
+/* ... outros estilos globais ... */
+
+
+/* ==========================================================================
+   ESTILO DO CABEÇALHO (DESKTOP PRIMEIRO)
+   ========================================================================== */
+.menu-header {
+    position: relative;
+    height: 100px; /* Altura padrão para desktop: curta e elegante */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+    /* ESTILO PADRÃO (PC): Apenas um gradiente escuro, SEM IMAGEM. */
+    background: linear-gradient(to right, var(--color-dark-bg), #1a1a1a);
+    border-bottom: 1px solid var(--color-border);
+    transition: height 0.3s ease;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%; /* Padding lateral, sem padding vertical */
+    background: transparent;
+}
+.logo img { width: 120px; }
+.nav-links { list-style: none; display: flex; }
+.nav-links li { margin-left: 35px; }
+.nav-links a { color: var(--color-text-light); font-weight: 500; font-size: 1rem; }
+.menu-toggle { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+.menu-toggle div { width: 28px; height: 3px; background-color: var(--color-text-light); }
+
+
+/* ==========================================================================
+   ESTILOS DA PÁGINA "INSTAGRAM"
+   ========================================================================== */
+main {
+    padding-top: 40px;
+}
+/* ... (Todo o resto do estilo da página instagram que você já tem) ... */
+.profile-header { display: flex; /* ... */ }
+.gallery-grid { display: grid; /* ... */ }
+
+
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+@media (max-width: 768px) {
+    
+    /* ESTILO DO CABEÇALHO PARA CELULAR: Adiciona a imagem de fundo */
+    .menu-header {
+        height: 180px; /* Um pouco mais alto no celular para a imagem aparecer bem */
+        
+        /* A imagem só aparece em telas menores que 768px */
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('imagens/imagemtopo.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .menu-toggle { display: flex; }
+    .nav-links {
+        display: none; position: fixed;
+        top: 75px; 
+        left: 0; width: 100%; 
+        background-color: rgba(33, 33, 33, 0.98);
+        flex-direction: column; align-items: center; padding: 20px 0;
+        border-top: 1px solid var(--color-border);
+    }
+    .nav-links.show { display: flex; } 
+    .nav-links li { margin: 12px 0; }
+    
+    /* ... (outros estilos responsivos da sua página) ... */
+    .profile-header { flex-direction: column; text-align: center; }
+    .gallery-grid { gap: 5px; }
+}
